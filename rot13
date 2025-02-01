@@ -1,0 +1,16 @@
+import codecs
+
+coded_message= 'cvpbPGS{abg_gbb_onq_bs_n_ceboyrz}'
+decoded_message=""
+for char in coded_message:
+    if 'a' <= char <= 'z':
+        decoded_char = chr(((ord(char) - ord('a') - 13) % 26) + ord('a'))
+        decoded_message += decoded_char
+    elif 'A' <= char <= 'A':
+        decoded_char = chr(((ord(char) - ord('A') - 13) % 26) + ord('A'))
+        decoded_message += decoded_char
+    else: 
+        decoded_message += char
+
+print(decoded_message)
+
